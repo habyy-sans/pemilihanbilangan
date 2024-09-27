@@ -4,13 +4,8 @@ public class pemilihanbilangan16 {
     Scanner sc = new Scanner(System.in);
     System.out.print("Masukan sebuah angka: ");
     int angka = sc.nextInt();
-        if (angka % 2 == 0)
-        {
-            System.out.println("Angka " + angka +" termasuk bilangan genap");
+        String result = (angka % 2 == 0) ? "bialngan genap" : "bilangan ganjil";
+            System.out.println("Angka " + angka +" termasuk " + result);
         }
-        else
-        {
-            System.out.println("Angka " + angka +" termasuk bilangan ganjil");
-        }
+        
     }
-}
