@@ -1,22 +1,25 @@
 import java.util.Scanner;
+
 public class Siakad16 {
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Masukkan nama: ");
+        String nama = scanner.nextLine();
         System.out.print("Masukkan NIM: ");
-        String nim = sc.nextLine();
+        String NIM = scanner.nextLine();
         System.out.print("Masukkan kelas: ");
-        String kelas = sc.nextLine();
+        String kelas = scanner.nextLine();
         System.out.print("Masukkan nomor absen: ");
-        int absen = sc.nextInt();
+        int absen = scanner.nextInt();
         System.out.print("Masukkan nilai kuis: ");
-        double nilaiKuis = sc.nextDouble();
+        double nilaiKuis = scanner.nextDouble();
         System.out.print("Masukkan nilai tugas: ");
-        double nilaiTugas = sc.nextDouble();
+        double nilaiTugas = scanner.nextDouble();
         System.out.print("Masukkan nilai ujian: ");
-        double nilaiUjian = sc.nextDouble();
+        double nilaiUjian = scanner.nextDouble();
 
-        double nilaiAkhir = (nilaiKuis * 0.2) + (nilaiTugas * 0.3) + (nilaiUjian * 0.5);
-        System.out.printf("Nilai akhir: %.2f\n", nilaiAkhir);
+        double nilaiAkhir = (nilaiKuis + nilaiTugas + nilaiUjian) / 3;
+
         String nilaiHuruf;
         String kualifikasi;
 
@@ -42,10 +45,11 @@ public class Siakad16 {
             nilaiHuruf = "E";
             kualifikasi = "Gagal";
         }
-
-        System.out.println("Nilai huruf: " + nilaiHuruf);
+        System.out.println("Mahasiswa dengan nama " + nama + " (NIM " + NIM + ") kelas " + kelas + " nomor absen " + absen);
+        System.out.printf("Nilai akhir: %.2f\n", nilaiAkhir);
+        System.out.println("Nilai akhir huruf: " + nilaiHuruf);
         System.out.println("Kualifikasi: " + kualifikasi);
-
-        sc.close();
+        
+      
     }
 }

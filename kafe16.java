@@ -31,14 +31,14 @@ public class kafe16 {
 
         switch (ukuranCup) {
             case 'S':
-            System.out.println("ukuran Small dipilih");
+                System.out.println("ukuran Small dipilih");
                 break;
             case 'M':
-            System.out.println("ukuran medium dipilih");
+                System.out.println("ukuran medium dipilih");
                 totalHarga += 0.25 * totalHarga;
                 break;
             case 'L':
-            System.out.println("ukuran large dipilih");
+                System.out.println("ukuran large dipilih");
                 totalHarga += 0.4 * totalHarga;
                 break;
             default:
